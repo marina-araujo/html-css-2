@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídas em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png"><!--colocar sempre em cima as imagens menores-->
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png"><!--colocar sempre 50px a mais que a largura da imagem para que não apareça a barra de rolagem. lembrar de colocar sempre o max ao invés de min-width-->
+        <img src="imagens/foto-g.png" alt="Imagem Flexível">
+    </picture>
+    <h2>Projeto Alce</h2>
+    <p>Agora vamos testar com uma imagem 3D de um ambiente projetado pelo Alce.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/3d-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/3d-m.png" type="image/png">
+        <img src="imagens/3d-g.png" alt="projeto alce">
+    </picture>
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+    <audio src="midia/luz-solart.mp3" controls autoplay></audio><!--formatos normalmente aceitos: mp3, wav, ogg-->
+    <p>Segunda opção para ouvir o áudio</p>
+    <audio preload="metadata" autoplay controls>
+        <source src="midia/luz-solart.mp3" type="audio/mpeg">
+        <source src="midia/luz-solart.ogg" type="audio/ogg"><!--conferir no pdf as várias opções de types-->
+        <p>Infelizmente seu navegador não consegue reproduir áudio. <a href="midia/luz-solart.mp3">Clique aqui para baixar o arquivo mp3.</a></p>
+    </audio>
+</body>
+</html>
