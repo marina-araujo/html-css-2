@@ -12,11 +12,33 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative; /* importante para fazer o cabeçalho fixo*/
         }
 
         td, th {
             border: 1px solid black;
             padding: 10px;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        thead > tr > th {
+            position: sticky; /* importante para fazer o cabeçalho fixo*/
+            top: -1px;
+            background-color: gray;
+        }
+
+        tbody > tr:nth-child(2n) {
+            background-color: lightgray;
+            /*
+            essa configuração deixa a tabela zebrada;
+            outra forma de fazer seria colocar odd (impar) ou even (par), no lugar do 2n
+            */
         }
 
         td.num {
@@ -34,6 +56,7 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION
             THEAD
                 TR, TD, TH
             TBODY (pode ter só o body)
@@ -42,15 +65,16 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
             </tr>
         </thead>
         <tfoot>
             <tr>
-                <th>Total de Habitantes BR</th>
+                <th scope="row">Total de Habitantes BR</th>
                 <td class="num"><strong>203 062 512</strong></td>
             </tr>
         </tfoot> <!--mesmo colocando o tfoot logo após o thead, ele só vai aparecer lá embaixo-->
@@ -83,8 +107,43 @@
                 <td>Pernambuco</td>
                 <td class="num">9 058 931</td>
             </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">8 794 957</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8 121 025</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">7 610 361</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">7 056 495</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">6 775 805</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">3 974 687</td>
+            </tr>
         </tbody>
-        
     </table>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta sit minus accusamus, aliquid veritatis amet repellendus maiores repudiandae error quod. Quaerat pariatur quae iure veniam ipsum repudiandae sint, aut qui. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus eos excepturi numquam, eligendi blanditiis, temporibus ratione officiis sint iusto laudantium, nulla architecto adipisci qui modi harum ullam suscipit cum quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur odio, ullam nam beatae quasi unde officiis repellat nemo optio ut repellendus repudiandae similique excepturi vitae voluptatum numquam qui voluptatem deserunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Non totam recusandae reprehenderit sint architecto tempora, modi quam aliquid praesentium nam minima repudiandae et deserunt vero velit deleniti, debitis sapiente expedita?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta sit minus accusamus, aliquid veritatis amet repellendus maiores repudiandae error quod. Quaerat pariatur quae iure veniam ipsum repudiandae sint, aut qui. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus eos excepturi numquam, eligendi blanditiis, temporibus ratione officiis sint iusto laudantium, nulla architecto adipisci qui modi harum ullam suscipit cum quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur odio, ullam nam beatae quasi unde officiis repellat nemo optio ut repellendus repudiandae similique excepturi vitae voluptatum numquam qui voluptatem deserunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Non totam recusandae reprehenderit sint architecto tempora, modi quam aliquid praesentium nam minima repudiandae et deserunt vero velit deleniti, debitis sapiente expedita?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta sit minus accusamus, aliquid veritatis amet repellendus maiores repudiandae error quod. Quaerat pariatur quae iure veniam ipsum repudiandae sint, aut qui. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus eos excepturi numquam, eligendi blanditiis, temporibus ratione officiis sint iusto laudantium, nulla architecto adipisci qui modi harum ullam suscipit cum quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur odio, ullam nam beatae quasi unde officiis repellat nemo optio ut repellendus repudiandae similique excepturi vitae voluptatum numquam qui voluptatem deserunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Non totam recusandae reprehenderit sint architecto tempora, modi quam aliquid praesentium nam minima repudiandae et deserunt vero velit deleniti, debitis sapiente expedita?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta sit minus accusamus, aliquid veritatis amet repellendus maiores repudiandae error quod. Quaerat pariatur quae iure veniam ipsum repudiandae sint, aut qui. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus eos excepturi numquam, eligendi blanditiis, temporibus ratione officiis sint iusto laudantium, nulla architecto adipisci qui modi harum ullam suscipit cum quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur odio, ullam nam beatae quasi unde officiis repellat nemo optio ut repellendus repudiandae similique excepturi vitae voluptatum numquam qui voluptatem deserunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Non totam recusandae reprehenderit sint architecto tempora, modi quam aliquid praesentium nam minima repudiandae et deserunt vero velit deleniti, debitis sapiente expedita?
+    </p>
 </body>
 </html>
