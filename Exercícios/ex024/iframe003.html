@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        iframe#tela {
+            width: 95vw;
+            height: 400px;
+            border: 2px solid black;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça uma escolha</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam molestiae ab, aliquam laborum corporis, natus soluta tenetur sed, delectus eius fugit et voluptatem iusto sint explicabo consequuntur iste voluptatum veritatis.</p>
+
+    <ul>
+        <li><a href="paginas-extras/pag001.html" target="frame">Primeira página</a></li> <!--colocar no target o name que foi escolhido para o iframe junto a ele-->
+        <li><a href="paginas-extras/pag002.html" target="frame">Segunda página</a></li>
+        <li><a href="paginas-extras/pag003.html" target="frame">Terceira página</a></li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia officiis hic minus vel rerum nam ratione sit facere cum quod corporis voluptate, reiciendis ducimus nobis eveniet, animi in earum nihil. Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quaerat non labore atque vitae, porro aliquid consectetur quas vel eum harum? Dolorum amet ratione vero voluptates pariatur excepturi assumenda quidem?</p>
+
+    <iframe id="tela" name="frame" srcdoc="<h1>Escolha uma das opções acima</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, officia aliquam maxime temporibus fugiat, corrupti earum alias magni id eum ad, quibusdam nulla quia totam est quod obcaecati veritatis! Nihil?</p><img src='imagens/bugdroid.png'>" > <!--crar um id é opicional, mas é precisa criar o name para usá-lo lá no target do link para que ele possa ser aberto nesse iframe-->
+
+        <!--o srcdoc é usado para um código estático dentro do iframe, mas o ideal mesmo é criar uma página específica para isso-->
+        <p>Infelizmente seu navegador não é compatível com isso.</p>
+    </iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ab laboriosam earum neque eius consequuntur necessitatibus? Quibusdam distinctio tempore voluptas corrupti, voluptatibus atque, aspernatur eum quis eaque libero, architecto quas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, earum nulla ad sint deserunt ut a quam ratione reiciendis vero. In, impedit. Sed dolorum quos non nisi, est assumenda eius?</p>
+</body>
+</html>
