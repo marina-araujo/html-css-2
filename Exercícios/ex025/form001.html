@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="off"><!--por padrão, o método utilizado é o GET (quando não é escolhido nenhum outro). o metodo post faz com que os dados não apareçam na url, enquanto o get mostra. ainda assim, o post não é totalmente seguro pois ele ainda guarda os dados. para isso, o melhor é necessário utilizar além do post, o https.-->
+        <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome"></p> <!--o label é o que liga o nome ao dado do formulário-->
+        <p><label for="isobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"></p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+</body>
+</html>
+<!--dados do formulário: file:///C:/MARINA/Cursos%20Gustavo%20Guanabara/Estudos%202/html-css-2/Exerc%C3%ADcios/ex025/cadastro.php?nome=Marina&sobrenome=Araujo-->
