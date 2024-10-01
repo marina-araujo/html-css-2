@@ -5,29 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>flexible box</title>
     <style>
+        body {
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
         div.conteiner {
             background-color: lightsalmon;
             display: flex;
+            height: 400px;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 3px 2px 5px 1px rgba(0, 0, 0, 0.49);
+            flex-flow: column wrap; /* serve como short hand e junção de flex-direction com flex-wrap. */
+            /*
             flex-direction: row;
+            flex-wrap: nowrap; */
         }
         div.item {
             background-color: lightblue;
             text-align: center;
             border: 1px solid black;
-            border-radius: 5px;
-            padding: 10px;
+            margin: 5px;
+            border-radius: 10px;
+            box-shadow: 3px 2px 5px 1px rgba(0, 0, 0, 0.49);
+            padding: 30px 40px;
+            flex: auto;
         }
     </style>
 </head>
 <body>
     <div class="conteiner">
-        <div class="item">A</div>
-        <div class="item">B</div>
-        <div class="item">C</div>
-        <div class="item">D</div>
-        <div class="item">E</div>
-        <div class="item">F</div>
-        <div class="item">G</div>
+        <div class="item">Bloco A</div>
+        <div class="item">Bloco B</div>
+        <div class="item">Bloco C</div>
+        <div class="item">Bloco D</div>
+        <div class="item">Bloco E</div>
+        <div class="item">Bloco F</div>
+        <div class="item">Bloco G</div>
     </div>
 </body>
 </html>
