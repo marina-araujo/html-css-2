@@ -18,14 +18,39 @@ header {
     background-color: gray;
     color: white;
     padding: 10px;
+
+    display: flex;
+    flex-flow: row wrap; /* o wrap vai fazer com que o bloco do nav desça quando a tela ficar curta */
+    justify-content: space-between; /* vai fazer com que haja um espaço entre os 2 blocos e o nav fica no canto direito e o título no canto esquerdo */
+    align-items: center; /* vai centralizar o eixo transversal */
 }
 
 header > h1 {
     border: 1px dotted black;
+    flex: 0 0 200px;
 }
 
 nav {
     border: 1px dotted black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+
+header > nav > a {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+header > nav > a:hover {
+    background-color: white;
+    color: black;
+    transition: background-color .5s; /* faz a transição de background-color mais lente*/
 }
 
 main {
