@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+header, header > nav {
+    flex-flow: column nowrap;
+}
+
+header > h1 {
+    flex-basis: 50px;
+}
+
+header > nav > a {
+    width: 90vw;
+}
+
+main {
+    /*width: 90vw; /* coloquei para deixar a largura igual ao dos bloquinhos no nav */
+    /*margin: 20px auto 0; /* coloquei por conta própria para centralizar o main, porém deixar um espaço acima dele */
+}
+
